@@ -77,7 +77,7 @@ switch (number) // Start a switch statement based on the value of 'number'
         break; // Exit the switch statement
 }*/
 
-/*
+
 //for loop
 int[] numbers = { 1, 2, 3, 4, 5 }; // Declare and initialize an array of integers with values from 1 to 5
 
@@ -89,6 +89,6 @@ for (int i = 0; i < numbers.Length; i++) // Initialize a for loop that runs 5 ti
 foreach (int number in numbers) // Initialize a foreach loop that iterates through each element in the 'numbers' array
 {
     Console.WriteLine($"Number: {number}"); // Print the current number to the console
-}*/
+}
 
 
