@@ -109,16 +109,25 @@ public class Program
 }
 */
 
+//Namespaces and Aliases
+using PATA = projectA.teamA; // Import the teamA namespace from projectA
+using PATB = projectA.teamB; // Import the teamB namespace from projectA
+
 class Program
 {
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
-        projectA.teamA.classA.Display(); // Call the Display method from classA in teamA namespace
-        projectA.teamB.classA.Display(); // Call the Display method from classA in teamB namespace
+        //projectA.teamA.classA.Display(); // Call the Display method from classA in teamA namespace
+        //projectA.teamB.classA.Display(); // Call the Display method from classA in teamB namespace
+        PATA.classA.Display(); // Call the Display method from classA in teamA namespace using alias
+        PATB.classA.Display(); // Call the Display method from classA in teamB namespace using alias
+
+
     }
 }
 
 //Namespaces
+/*
 namespace projectA
 {
     namespace teamA
@@ -147,3 +156,4 @@ namespace projectA
     }
 
 }
+*/

@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="../projectA.teamA/projectA.teamA.csproj" Id="f116845b-e9dc-408c-b9fc-744476cba710" />
+  <Project Path="../projectA.teamB/projectA.teamB.csproj" Id="33a45356-26cf-4e83-a408-b85dbecf03f8" />
   <Project Path="CSharpLearning.csproj" />
 </Solution>
