@@ -91,6 +91,7 @@ foreach (int number in numbers) // Initialize a foreach loop that iterates throu
     Console.WriteLine($"Number: {number}"); // Print the current number to the console
 }
 */
+/*
 //pass by reference example 
 public class Program
 {
@@ -106,4 +107,43 @@ public class Program
         value++;
     }
 }
+*/
 
+class Program
+{
+    static void Main(string[] args)
+    {
+        projectA.teamA.classA.Display(); // Call the Display method from classA in teamA namespace
+        projectA.teamB.classA.Display(); // Call the Display method from classA in teamB namespace
+    }
+}
+
+//Namespaces
+namespace projectA
+{
+    namespace teamA
+    {
+        class classA
+        {
+            public static void Display()
+            {
+                Console.WriteLine("TeamA display method");
+            }
+        }
+    }
+
+}
+namespace projectA
+{
+    namespace teamB
+    {
+        class classA
+        {
+            public static void Display()
+            {
+                Console.WriteLine("TeamB display method");
+            }
+        }
+    }
+
+}
