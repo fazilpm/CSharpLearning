@@ -113,19 +113,6 @@ public class Program
 //using PATA = projectA.teamA; // Import the teamA namespace from projectA
 //using PATB = projectA.teamB; // Import the teamB namespace from projectA
 
-class Program
-{
-    public static void Main(string[] args)
-    {
-        //projectA.teamA.classA.Display(); // Call the Display method from classA in teamA namespace
-        //projectA.teamB.classA.Display(); // Call the Display method from classA in teamB namespace
-        //PATA.classA.Display(); // Call the Display method from classA in teamA namespace using alias
-        //PATB.classA.Display(); // Call the Display method from classA in teamB namespace using alias
-
-
-    }
-}
-
 //Namespaces
 /*
 namespace projectA
@@ -157,3 +144,49 @@ namespace projectA
 
 }
 */
+
+
+//Class Customer with constructor and method to display customer information
+class Customer
+{
+    //string _firstName; // Private field to store the first name of the customer - old method of declaring private fields without access modifiers, default is private
+    //string _lastName; // Private field to store the last name of the customer - old method of declaring private fields without access modifiers, default is private
+
+    string firstName; // Private field to store the first name of the customer - new method of declaring private fields without access modifiers, default is private
+    string lastName; // Private field to store the last name of the customer - new method of declaring private fields without access modifiers, default is private
+
+    public Customer(string firstName, string lastName)
+    {
+        //this._firstName = firstName;
+        //this._lastName = lastName;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    public void DisplayCustomerInfo()
+    {
+        Console.WriteLine($"Customer Name: {this.firstName} {this.lastName}"); // Print the customer's full name to the console
+    }
+}
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        //projectA.teamA.classA.Display(); // Call the Display method from classA in teamA namespace
+        //projectA.teamB.classA.Display(); // Call the Display method from classA in teamB namespace
+        //PATA.classA.Display(); // Call the Display method from classA in teamA namespace using alias
+        //PATB.classA.Display(); // Call the Display method from classA in teamB namespace using alias
+        string firstName; // Declare a variable to store the first name
+        string lastName; // Declare a variable to store the last name
+        Console.WriteLine("Enter First Name:"); // Prompt the user to enter their first name
+        firstName = Console.ReadLine(); // Read the first name from the console
+        Console.WriteLine("Enter Last Name:"); // Prompt the user to enter their last name
+        lastName = Console.ReadLine(); // Read the last name from the console
+
+        Customer customer = new Customer(firstName, lastName); // Create a new Customer object with the provided names
+        customer.DisplayCustomerInfo(); // Call the DisplayCustomerInfo method to display the customer's information
+
+    }
+}
+
+
