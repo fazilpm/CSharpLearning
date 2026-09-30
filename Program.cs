@@ -179,9 +179,21 @@ class Program
         string firstName; // Declare a variable to store the first name
         string lastName; // Declare a variable to store the last name
         Console.WriteLine("Enter First Name:"); // Prompt the user to enter their first name
-        firstName = Console.ReadLine(); // Read the first name from the console
+        string? input = Console.ReadLine(); // Read the first name from the console
+        if (string.IsNullOrEmpty(input)) // Check if the first name is null or empty
+        {
+            Console.WriteLine("First Name cannot be empty."); // Print an error message if the first name is empty
+            return; // Exit the program
+        }
+        firstName = input;
         Console.WriteLine("Enter Last Name:"); // Prompt the user to enter their last name
-        lastName = Console.ReadLine(); // Read the last name from the console
+        string? input2 = Console.ReadLine(); // Read the last name from the console
+        if (string.IsNullOrEmpty(input2)) // Check if the last name is null or empty
+        {
+            Console.WriteLine("Last Name cannot be empty."); // Print an error message if the last name is empty
+            return; // Exit the program
+        }
+        lastName = input2;
 
         Customer customer = new Customer(firstName, lastName); // Create a new Customer object with the provided names
         customer.DisplayCustomerInfo(); // Call the DisplayCustomerInfo method to display the customer's information
