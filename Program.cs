@@ -145,8 +145,9 @@ namespace projectA
 }
 */
 
-
+/*
 //Class Customer with constructor and method to display customer information
+//Part 19
 class Customer
 {
     //string _firstName; // Private field to store the first name of the customer - old method of declaring private fields without access modifiers, default is private
@@ -167,15 +168,95 @@ class Customer
         Console.WriteLine($"Customer Name: {this.firstName} {this.lastName}"); // Print the customer's full name to the console
     }
 }
+*/
+//static and non-static classes members
+class MyClass
+{
+    public static int StaticValue = 10; // Static member variable, shared across all instances of the class
+    public int NonStaticValue; // Non-static member variable, unique to each instance of the class
+    public MyClass(int value)
+    {
+        NonStaticValue = value; // Initialize the non-static member variable with the provided value
+    }
+    public static void DisplayStaticValue()
+    {
+        Console.WriteLine($"Static Value: {StaticValue}"); // Print the static member variable to the console
+    }
+    public void DisplayNonStaticValue()
+    {
+        Console.WriteLine($"Non-Static Value: {NonStaticValue}"); // Print the non-static member variable to the console
+    }
+}
+
+class MyStaticClass
+{
+    public static int StaticValue = 20; // Static member variable, shared across all instances of the class
+    public static void DisplayStaticValue()
+    {
+        Console.WriteLine($"Static Value from MyStaticClass: {StaticValue}"); // Print the static member variable to the console
+    }
+}
+
+class MyNonStaticClass
+{
+    public int NonStaticValue; // Non-static member variable, unique to each instance of the class
+    public MyNonStaticClass(int value)
+    {
+        NonStaticValue = value; // Initialize the non-static member variable with the provided value
+    }
+    public void DisplayNonStaticValue()
+    {
+        Console.WriteLine($"Non-Static Value from MyNonStaticClass: {NonStaticValue}"); // Print the non-static member variable to the console
+    }
+}
+class MyStaticNonStaticClass
+{
+    public static int StaticValue = 30; // Static member variable, shared across all instances of the class
+    public int NonStaticValue; // Non-static member variable, unique to each instance of the class
+    public MyStaticNonStaticClass(int value)
+    {
+        NonStaticValue = value; // Initialize the non-static member variable with the provided value
+    }
+    public static void DisplayStaticValue()
+    {
+        Console.WriteLine($"Static Value from MyStaticNonStaticClass: {StaticValue}"); // Print the static member variable to the console
+    }
+    public void DisplayNonStaticValue()
+    {
+        Console.WriteLine($"Non-Static Value from MyStaticNonStaticClass: {NonStaticValue}"); // Print the non-static member variable to the console
+    }
+}
+class Circle
+{
+    public double Radius { get; set; }
+    public Circle(double radius)
+    {
+        Radius = radius;
+    }
+    public double GetArea()
+    {
+        return Math.PI * Radius * Radius;
+    }
+}
 
 class Program
 {
     public static void Main(string[] args)
     {
+        //Part 20 - Demonstrate the use of static and non-static classes and members
+        Circle C1 = new Circle(5); // Create a new Circle object with a radius of 5
+        float area = (float)C1.GetArea(); // Call the GetArea method to calculate the area of the circle
+        Console.WriteLine($"Area of the circle: {area}");
+
+
         //projectA.teamA.classA.Display(); // Call the Display method from classA in teamA namespace
         //projectA.teamB.classA.Display(); // Call the Display method from classA in teamB namespace
         //PATA.classA.Display(); // Call the Display method from classA in teamA namespace using alias
         //PATB.classA.Display(); // Call the Display method from classA in teamB namespace using alias
+
+        /*
+        //Part 19 - Create a Customer object and display customer information
+
         string firstName; // Declare a variable to store the first name
         string lastName; // Declare a variable to store the last name
         Console.WriteLine("Enter First Name:"); // Prompt the user to enter their first name
@@ -197,6 +278,9 @@ class Program
 
         Customer customer = new Customer(firstName, lastName); // Create a new Customer object with the provided names
         customer.DisplayCustomerInfo(); // Call the DisplayCustomerInfo method to display the customer's information
+        */
+
+
 
     }
 }
